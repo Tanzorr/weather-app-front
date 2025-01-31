@@ -18,6 +18,6 @@ export const GET_WEATHER_FROM_DB_FAILURE = 'GET_WEATHER_FROM_DB_FAILURE';
 export const SET_ERROR = 'SET_ERROR';
 
 export const setCity = (city) => ({
-    type: SET_CITY,
-    payload: city
+  type: SET_CITY,
+  payload: city,
 });
