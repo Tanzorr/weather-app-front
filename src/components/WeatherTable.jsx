@@ -1,4 +1,4 @@
-// eslint-disable-next-line react/prop-types
+
 const WeatherTable = ({ weatherList }) => (
     <table className="table table-striped border mt-3">
         <thead>
