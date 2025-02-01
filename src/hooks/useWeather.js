@@ -11,7 +11,7 @@ import {
   getWeatherFromDb,
   submitWeather,
 } from '../redux/weatherThunks.js';
-import { SET_ERROR, setCity } from '../redux/weatherActions.js';
+import { clearAllState, SET_ERROR, setCity } from '../redux/weatherActions.js';
 import { validateCity } from '../utils/validations.js';
 
 export const useWeather = () => {
@@ -58,6 +58,10 @@ export const useWeather = () => {
     dispatch(submitWeather(data));
   };
 
+  const clearState = () => {
+    dispatch(clearAllState());
+  };
+
   return {
     inputValue,
     setInputValue,
@@ -68,5 +72,6 @@ export const useWeather = () => {
     fetchApiCityWeather,
     fetchDbCityWeather,
     submitCityWeatherData,
+    clearState,
   };
 };

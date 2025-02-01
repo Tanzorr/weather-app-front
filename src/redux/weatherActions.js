@@ -16,8 +16,13 @@ export const GET_WEATHER_FROM_DB_SUCCESS = 'GET_WEATHER_FROM_DB_SUCCESS';
 export const GET_WEATHER_FROM_DB_FAILURE = 'GET_WEATHER_FROM_DB_FAILURE';
 
 export const SET_ERROR = 'SET_ERROR';
+export const CLEAN_STATE = 'CLEAN_STATE';
 
 export const setCity = (city) => ({
   type: SET_CITY,
   payload: city,
+});
+
+export const clearAllState = () => ({
+  type: CLEAN_STATE,
 });

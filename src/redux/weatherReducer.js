@@ -10,6 +10,7 @@ import {
   GET_WEATHER_FROM_DB_SUCCESS,
   GET_WEATHER_FROM_DB_FAILURE,
   SET_ERROR,
+  CLEAN_STATE,
 } from './weatherActions.js';
 
 const initialState = {
@@ -63,6 +64,14 @@ const weatherReducer = (state = initialState, action) => {
 
     case SET_ERROR:
       return { ...state, error: action.payload };
+    case CLEAN_STATE:
+      return {
+        city: '',
+        data: null,
+        loading: false,
+        requestMessage: null,
+        error: null,
+      };
 
     default:
       return state;

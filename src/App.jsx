@@ -17,13 +17,18 @@ function App() {
     fetchApiCityWeather,
     fetchDbCityWeather,
     submitCityWeatherData,
+    clearState,
   } = useWeather();
 
   return (
-    <div className="container">
+    <div className="container p-5">
       <h1 className="text-center">Weather forecast</h1>
-      <div className="d-flex justify-content-between gap-3 mb-3">
-        <SearchInput inputValue={inputValue} setInputValue={setInputValue} />
+      <div className="d-flex justify-content-center gap-3 mb-3">
+        <SearchInput
+          inputValue={inputValue}
+          setInputValue={setInputValue}
+          onClear={clearState}
+        />
         <WeatherButtons
           fetchApiCityWeather={fetchApiCityWeather}
           fetchDbCityWeather={fetchDbCityWeather}
